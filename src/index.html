@@ -3,9 +3,48 @@
     @@include('html/_head.htm',{ "title":"Sergiiva Decor" })
     <body>
         <div class="wrapper">
-            @@include('html/_header.htm',{})
+            <header class="header header_hero">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <button type="button" class="menu__icon icon-menu"><span></span></button>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Головна</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Про нас</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Послуги</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Портфоліо</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#" class="menu__link">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__btns">
+                        <a href="#" class="btn header__btn">Подзвонити</a>
+                        <p class="lang-switch">
+                            <a href="#" class="active">Укр</a> | <a href="#">En</a>
+                        </p>
+                    </div>
+                </div>
+            </header>
+
             <main class="page">
-                <div class="hero__container"></div>
+                <section class="hero">
+                    <div class="hero__container">
+                        <div class="hero__content">
+                            <img src="@img/logo-white.png" alt="Logo" />
+                            <a href="#" class="btn header__btn hero__btn">Зв'язатись з нами</a>
+                        </div>
+                    </div>
+                </section>
             </main>
             @@include('html/_footer.htm',{})
         </div>
