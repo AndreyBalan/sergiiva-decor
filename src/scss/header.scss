@@ -81,6 +81,9 @@
     // .menu__link
     &__link {
     }
+    &__link.active {
+        color: $blueFirmColor;
+    }
 }
 .icon-menu {
 }

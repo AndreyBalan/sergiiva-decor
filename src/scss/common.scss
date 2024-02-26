@@ -1,1 +1,15 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.btn {
+    padding: toRem(12) toRem(30);
+    line-height: 150%;
+    font-weight: 700;
+    border: toRem(1) solid $darkColor;
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+            background-color: $blueFirmColor;
+            border-color: $blueFirmColor;
+        }
+    }
+}
