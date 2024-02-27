@@ -1,0 +1,35 @@
+.services {
+    padding: toRem(80) toRem(0);
+    // .services__container
+    &__container {
+        display: flex;
+        gap: toRem(100);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    // .services__img
+    &__img {
+        max-width: toRem(550);
+    }
+    // .services__content
+    &__content {
+        max-width: toRem(550);
+    }
+    // .services__title
+    &__title {
+        font-family: "Oswald";
+        font-size: toRem(24);
+        font-weight: 700;
+        &:not(:last-child) {
+            margin-top: toRem(30);
+        }
+    }
+    // .services__list
+    &__list {
+    }
+    // .services__list-item
+    &__list-item {
+        font-size: toRem(18);
+        margin-top: toRem(18);
+    }
+}

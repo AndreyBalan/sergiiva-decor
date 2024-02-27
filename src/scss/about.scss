@@ -1,5 +1,5 @@
 .about {
-    // text-align: center;
+    padding: toRem(80) toRem(0);
     // .about__container
     font-family: "Oswald";
     &__container {
@@ -32,6 +32,17 @@
     // .about__right
     &__right {
         padding: toRem(70) toRem(60) toRem(100) toRem(0);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: rgba(177, 226, 248, 0.897);
+            z-index: -1;
+        }
     }
     // .about__right_top
     &__right_top {
