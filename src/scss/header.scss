@@ -22,6 +22,7 @@
         display: flex;
         align-items: center;
         gap: toRem(30);
+        position: relative;
     }
     &__btn {
         padding: toRem(12) toRem(30);
@@ -51,6 +52,11 @@
             }
         }
     }
+    &__address {
+        max-width: toRem(250);
+        text-align: center;
+        line-height: 150%;
+    }
 }
 .menu {
     display: flex;
@@ -64,9 +70,13 @@
     // .menu__list
     &__list {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: toRem(40);
+        justify-content: center;
+        height: 100%;
+        gap: toRem(60);
         font-weight: 700;
+        font-size: toRem(40);
         // color: $darkColor;
     }
     // .menu__item
@@ -103,4 +113,38 @@
     }
 }
 
-// Hero Header
+// call btn
+.btn {
+    &_call {
+        padding: toRem(12);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: toRem(45);
+        height: toRem(45);
+        animation: pulse 2s infinite;
+        border-radius: 50%;
+        transition: all 0.3s;
+        @keyframes pulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+        img {
+            fill: #fff;
+            stroke: #fff;
+            color: #fff;
+            max-width: 100%;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: toRem(0) toRem(0) toRem(7) #fff inset;
+                box-shadow: toRem(0) toRem(0) toRem(7) #fff;
+            }
+        }
+    }
+}

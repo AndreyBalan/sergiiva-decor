@@ -46,5 +46,199 @@
 }
 .btn {
 }
-
 //====================================================================================================
+
+// about
+
+.about {
+    padding: toRem(80) toRem(0);
+    // .about__container
+    font-family: "Oswald";
+    &__container {
+        max-width: toRem(1400);
+    }
+    // .about__wrapper
+    &__wrapper {
+        display: flex;
+        gap: toRem(50);
+    }
+    // .about__left
+    &__left {
+        width: toRem(400);
+        padding-top: toRem(120);
+        text-align: center;
+        img {
+            margin-top: toRem(100);
+            width: 100%;
+        }
+    }
+    // .about__subtitle
+    &__subtitle {
+        font-size: toRem(20);
+        &:not(:first-child) {
+            display: block;
+            margin-top: toRem(40);
+            font-size: toRem(24);
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    // .about__title
+    &__title {
+        margin-top: toRem(30);
+        font-size: toRem(40);
+        &:not(:first-child) {
+            margin-top: toRem(40);
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    // .about__right
+    &__right {
+        padding: toRem(70) toRem(60) toRem(100) toRem(0);
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background-color: rgba(177, 226, 248, 0.897);
+            z-index: -1;
+        }
+    }
+    // .about__right_top
+    &__right_top {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        align-items: center;
+        gap: toRem(40);
+        img {
+            max-width: toRem(670);
+        }
+    }
+    // .about__right_top-content
+    &__right_top-content {
+        h2 {
+            margin-top: toRem(0);
+            font-size: toRem(24);
+        }
+    }
+    // .about__right_bottom
+    &__right_bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: toRem(50);
+        gap: toRem(50);
+        img:nth-child(1) {
+            max-width: toRem(424);
+            display: block;
+        }
+        img:nth-child(2) {
+            display: block;
+            width: toRem(424);
+            max-height: toRem(560);
+        }
+    }
+}
+.subtitle {
+}
+.title {
+}
+
+//========================================================================================================================================================
+// Services
+.services {
+    padding: toRem(80) toRem(0);
+    // .services__container
+    &__container {
+        display: flex;
+        gap: toRem(100);
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    // .services__img
+    &__img {
+        max-width: toRem(550);
+    }
+    // .services__content
+    &__content {
+        max-width: toRem(550);
+    }
+    // .services__title
+    &__title {
+        font-family: "Oswald";
+        font-size: toRem(28);
+        font-weight: 700;
+        color: $blueFirmColor;
+        &:not(:first-child) {
+            margin-top: toRem(30);
+        }
+    }
+    // .services__list
+    &__list {
+    }
+    // .services__list-item
+    &__list-item {
+        font-size: toRem(18);
+        margin-top: toRem(18);
+    }
+}
+
+//========================================================================================================================================================
+// Portfolio
+.portfolio {
+    padding: toRem(80) toRem(0);
+    // .portfolio__container
+    &__container {
+    }
+    // .portfolio__slider
+    &__slider {
+    }
+    // .portfolio__wrapper
+    &__wrapper {
+    }
+    // .portfolio__slide
+    &__slide {
+    }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+    height: toRem(800);
+}
+.swiper-slide {
+    img {
+        height: toRem(750);
+        transition: transform 0.3s ease;
+        transform: scale(0.9);
+    }
+}
+.swiper-slide-active {
+    img {
+        height: toRem(800);
+        transform: scale(1);
+    }
+}
+.swiper-slide-prev {
+}
+.swiper-slide-next {
+}
+.swiper-pagination {
+}
+.swiper-button-prev,
+.swiper-button-next {
+    border: toRem(1) solid $blueFirmColor;
+    padding: toRem(20);
+    border-radius: 50%;
+}
+.swiper-button-next {
+}
+.swiper-scrollbar {
+}
