@@ -211,18 +211,19 @@
 .swiper-wrapper {
 }
 .swiper-slide {
-    height: toRem(800);
+    // height: toRem(800);
 }
 .swiper-slide {
     img {
-        height: toRem(750);
+        height: toRem(600);
+        object-fit: cover;
         transition: transform 0.3s ease;
         transform: scale(0.9);
     }
 }
 .swiper-slide-active {
     img {
-        height: toRem(800);
+        // height: toRem(800);
         transform: scale(1);
     }
 }
