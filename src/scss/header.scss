@@ -24,6 +24,15 @@
         gap: toRem(30);
         position: relative;
         width: toRem(150);
+        @media (max-width: $mobile) {
+            width: toRem(100);
+            text-align: center;
+        }
+        span {
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
     }
     &__btn {
         padding: toRem(12) toRem(30);
@@ -57,12 +66,18 @@
         max-width: toRem(250);
         text-align: center;
         line-height: 150%;
+        @media (max-width: toRem(374)) {
+            display: none;
+        }
     }
 }
 .menu {
     display: flex;
     align-items: center;
     width: toRem(150);
+    @media (max-width: $mobile) {
+        width: toRem(100);
+    }
     // .menu__icon
     &__icon {
     }

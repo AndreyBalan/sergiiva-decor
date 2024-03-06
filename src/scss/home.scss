@@ -60,16 +60,28 @@
     // .about__wrapper
     &__wrapper {
         display: flex;
-        gap: toRem(50);
+        justify-content: space-between;
+        @include adaptiveValue("gap", 50, 10, 0, $containerWidth, 767.98);
+        @media (max-width: toRem(767)) {
+            flex-wrap: wrap;
+        }
     }
     // .about__left
     &__left {
-        width: toRem(400);
+        max-width: toRem(400);
         padding-top: toRem(120);
         text-align: center;
+        @include adaptiveValue("max-width", 400, 300, 0, $containerWidth, 767.98);
         img {
             margin-top: toRem(100);
             width: 100%;
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+        }
+        @media (max-width: $mobile) {
+            max-width: 100%;
+            text-align: center;
         }
     }
     // .about__subtitle
@@ -78,7 +90,8 @@
         &:not(:first-child) {
             display: block;
             margin-top: toRem(40);
-            font-size: toRem(24);
+            // font-size: toRem(24);
+            @include adaptiveValue("font-size", 24, 20, 0, $containerWidth, 767.98);
         }
         span {
             font-weight: 700;
@@ -98,6 +111,8 @@
     // .about__right
     &__right {
         padding: toRem(70) toRem(60) toRem(100) toRem(0);
+        max-width: toRem(900);
+        @include adaptiveValue("max-width", 900, 500, 0, $containerWidth, 767.98);
         position: relative;
         &::before {
             content: "";
@@ -109,6 +124,10 @@
             background-color: rgba(177, 226, 248, 0.897);
             z-index: -1;
         }
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            padding-right: toRem(0);
+        }
     }
     // .about__right_top
     &__right_top {
@@ -116,9 +135,17 @@
         justify-content: space-between;
         text-align: center;
         align-items: center;
-        gap: toRem(40);
+        @include adaptiveValue("gap", 40, 15, 0, $containerWidth, 767.98);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         img {
             max-width: toRem(670);
+            @include adaptiveValue("max-width", 670, 350, 0, $containerWidth, 767.98);
+            @media (max-width: $mobile) {
+                max-width: 100%;
+            }
         }
     }
     // .about__right_top-content
@@ -133,15 +160,29 @@
         display: flex;
         justify-content: space-between;
         margin-top: toRem(50);
-        gap: toRem(50);
+        // gap: toRem(50);
+        @include adaptiveValue("gap", 50, 10, 0, $containerWidth, 767.98);
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         img:nth-child(1) {
-            max-width: toRem(424);
+            // max-width: toRem(424);
+            @include adaptiveValue("max-width", 424, 270, 0, $containerWidth, 767.98);
             display: block;
+            @media (max-width: $mobile) {
+                max-width: 80%;
+                text-align: center;
+            }
         }
         img:nth-child(2) {
             display: block;
             width: toRem(424);
+            @include adaptiveValue("max-width", 424, 270, 0, $containerWidth, 767.98);
             max-height: toRem(560);
+            @media (max-width: $mobile) {
+                max-width: 80%;
+            }
         }
     }
 }
@@ -157,17 +198,29 @@
     // .services__container
     &__container {
         display: flex;
-        gap: toRem(100);
+        @include adaptiveValue("gap", 100, 50, 0, $containerWidth, 767.98);
         flex-wrap: wrap;
         align-items: center;
     }
     // .services__img
     &__img {
-        max-width: toRem(550);
+        // max-width: toRem(550);
+        @include adaptiveValue("max-width", 550, 380, 0, $containerWidth, 767.98);
+        @media (max-width: $mobile) {
+            max-width: 100%;
+        }
     }
     // .services__content
     &__content {
         max-width: toRem(550);
+        @include adaptiveValue("max-width", 550, 340, 0, $containerWidth, 767.98);
+        @media (max-width: $pc) {
+            max-width: toRem(300);
+        }
+        @media (max-width: $mobile) {
+            text-align: center;
+            max-width: 100%;
+        }
     }
     // .services__title
     &__title {
@@ -219,6 +272,9 @@
         object-fit: cover;
         transition: transform 0.3s ease;
         transform: scale(0.9);
+    }
+    @media (max-width: $tablet) {
+        text-align: center;
     }
 }
 .swiper-slide-active {
